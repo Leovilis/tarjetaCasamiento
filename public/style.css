@@ -1,0 +1,234 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&family=PT+Serif&family=Poppins&family=Shadows+Into+Light&display=swap");
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif !important;
+  width: 87%;
+  margin: 10px auto;
+  padding: 20px;
+  border-radius: 8px;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  background: url("fondo2.png") fixed center !important;
+  background-size: contain;
+}
+
+h1 {
+  text-shadow: 5px 5px 32px rgba(253, 235, 32, 0.849) !important;
+  color: #ffffff !important;
+  text-align: center;
+  font-family: "Splash", cursive;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 105px;
+}
+h2 {
+  text-shadow: 5px 5px 32px rgba(253, 235, 32, 0.849) !important;
+  color: #ffffff !important;
+  font-family: "Monserrat", cursive;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 80px;
+  text-align: justify;
+  margin-bottom: 150px;
+}
+.container {
+  margin-bottom: 65px;
+}
+h3 {
+  text-shadow: 5px 5px 32px rgba(253, 235, 32, 0.849) !important;
+  color: #ffffff !important;
+  font-family: "Poppins", cursive;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 10px;
+  margin-top: 30px;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  /* width: 100%; */
+  justify-content: center;
+  align-items: center;
+}
+.confirmar {
+  margin-bottom: 50px;
+}
+span {
+  text-align: center;
+  text-shadow: 5px 5px 32px rgba(253, 235, 32, 0.849) !important;
+  color: #ffffff !important;
+  font-family: "Shadow into ligth", cursive;
+  font-weight: bolder;
+  font-style: normal;
+  margin-left: 200px;
+}
+
+label {
+  font-size: 30px;
+  text-shadow: 5px 5px 32px rgba(253, 235, 32, 0.849) !important;
+  color: #ffffff !important;
+}
+
+input {
+  padding: 8px;
+  margin-bottom: 1px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+    background-color: #00000000;
+    color: #ffffff;
+    font-size: 18px;
+
+}
+.boton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+button {
+  text-shadow: 5px 5px 32px rgba(253, 235, 32, 0.849) !important;
+  color: #000000 !important;
+  font-size: 40px;
+  width: 100px;
+  height: 100px;
+  padding: 10px;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #ffee00;
+}
+
+.boton{
+    animation-name: parpadeo;
+  animation-duration: 1s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+
+  -webkit-animation-name: parpadeo;
+  -webkit-animation-duration: 1s;
+  -webkit-animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+}
+@-moz-keyframes parpadeo {
+    0% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  @-webkit-keyframes parpadeo {
+    0% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes parpadeo {
+    0% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+ 
+
+/* Media query para dispositivos móviles */
+@media only screen and (min-width: 300px) and (max-width: 414px){
+  body {
+    width: 80%;
+    background: url("fondo3.png") no-repeat center !important;
+    background-size: contain;
+  }
+
+  h1 {
+    font-size: 40px;
+  }
+
+  h2 {
+    
+    font-size: 25px;
+    font-family: "Shadow Into Light", cursive !important;
+    margin-bottom: 20px;
+  }
+
+  h3 {
+    font-size: 15px;
+  }
+  span{
+    margin-left: 10px;
+  }
+  .confirmar{
+    margin-bottom: 30px;
+  }
+  label {
+    font-size: 15px;
+  }
+
+  input {
+    font-size: 10px;
+  }
+
+  button {
+    font-size: 24px;
+  }
+}
+@media only screen and (min-width: 415px) and (max-width: 700px){
+    body {
+      width: 80%;
+      background: url("fondo4.png") no-repeat center !important;
+      background-size: contain;
+    }
+    h1 {
+        font-size: 40px;
+      }
+    
+      h2 {
+        
+        font-size: 25px;
+        font-family: "Shadow Into Light", cursive !important;
+        margin-bottom: 20px;
+      }
+    
+      h3 {
+        font-size: 15px;
+      }
+      span{
+        margin-left: 10px;
+      }
+      .confirmar{
+        margin-bottom: 30px;
+      }
+      form{
+        width: 80%;
+      }
+      label {
+        font-size: 15px;
+      }
+    
+      input {
+        font-size: 10px;
+      }
+    
+      button {
+        font-size: 24px;
+      }
+}
