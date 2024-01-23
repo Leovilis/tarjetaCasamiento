@@ -23,18 +23,46 @@ app.post('/confirmacion', (req, res) => {
     // Configurar las opciones del correo
     const mailOptions = {
         from: 'leovilis@gmail.com',
-        to: 'vialvaceciliaines@gmail.com, leovilis@gmail.com', // Cambia a tu dirección de correo
+        to: 'lcampos@ddonpedrosrl.com', // Cambia a tu dirección de correo
         subject: 'Confirmación de Asistencia',
         text: `Nombre y Apellido: ${nombre}\nCorreo: ${correo}\nConfirmación: Asistirá al casamiento.`
     };
+    // const destinatarios = ['pablopacheco497@gmail.com', 'vialvaceciliaines@gmail.com', 'arroyocecilia62@gmail.com'];
+
+    // Configurar las opciones del correo
+    // const mailOptions = {
+    //     from: 'leovilis@gmail.com',
+    //     to: destinatarios.join(','), // Convierte el array a una cadena separada por comas
+    //     subject: 'Confirmación de Asistencia',
+    //     text: `Nombre y Apellido: ${nombre}\nCorreo: ${correo}\nConfirmación: Asistirá al casamiento.`
+    // };
+    // Enviar el correo
+    // transporter.sendMail(mailOptions, (error, info) => {
+    //     if (error) {
+    //         return console.error(error);
+    //     }
+    //     console.log('Correo enviado:', info.response);
+    // });
 
     // Enviar el correo
-    transporter.sendMail(mailOptions, (error, info) => {
-        if (error) {
-            return console.error(error);
-        }
-        console.log('Correo enviado:', info.response);
-    });
+// transporter.sendMail(mailOptions, (error, info) => {
+//     if (error) {
+//         console.error('Error al enviar el correo:', error.message);
+//         res.status(500).send('Error al enviar el correo. Por favor, inténtalo de nuevo.');
+//     } else {
+//         console.log('Correo enviado:', info.response);
+//         res.sendFile(__dirname + '/public/confirmacion.html');
+//     }
+// });
+transporter.sendMail(mailOptions, (error, info) => {
+    if (error) {
+        console.error('Error al enviar el correo:', error.message);
+        res.status(500).send('Error al enviar el correo. Por favor, inténtalo de nuevo.');
+    } else {
+        console.log('Correo enviado:', info);
+        res.sendFile(__dirname + '/public/confirmacion.html');
+    }
+});
 
     // Enviar una respuesta al navegador
     res.sendFile(__dirname + '/public/confirmacion.html');
